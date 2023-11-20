@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import TopHeader from "@/components/Header/TopHeader"
+import NavBar from "./NavBar";
 
 const ContainerHeader = styled.header`
     display: flex;
@@ -13,6 +14,7 @@ export default function Header () {
     return(
         <ContainerHeader>
             <TopHeader />
+            <NavBar />
         </ContainerHeader>
     )
 }
