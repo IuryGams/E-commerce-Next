@@ -5,7 +5,7 @@ const ContainerHeader = styled.header`
     display: flex;
     flex-direction: column;
     width: 100dvw;
-    height: 8dvh;
+    height: 12dvh;
     background-color: slategray;
 `
 
