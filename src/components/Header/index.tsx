@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import TopHeader from "./TopHeader";
 
 const ContainerHeader = styled.header`
     display: flex;
@@ -12,7 +11,7 @@ const ContainerHeader = styled.header`
 export default function Header () {
     return(
         <ContainerHeader>
-            <TopHeader />
+
         </ContainerHeader>
     )
 }
