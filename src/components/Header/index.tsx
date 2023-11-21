@@ -4,10 +4,17 @@ import NavBar from "./NavBar";
 
 const ContainerHeader = styled.header`
     display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
     flex-direction: column;
-    width: 100dvw;
-    height: 12dvh;
-    background-color: slategray;
+    max-width: 100vw;
+    background-color:#0086CF;
+    color: white;
+
+    a{
+        color: whitesmoke;
+    }
 `
 
 export default function Header () {
@@ -15,6 +22,7 @@ export default function Header () {
         <ContainerHeader>
             <TopHeader />
             <NavBar />
+ 
         </ContainerHeader>
     )
 }

@@ -8,8 +8,8 @@ const ContainerSection = styled.section`
     justify-content: space-around;
     max-width: 1440px;
     width: 100%;
-    height: 8dvh;
     margin: 0 auto;
+    padding: 0.75em 0em;
 `
 
 const Title = styled.h1`
@@ -31,7 +31,7 @@ const StyledForm = styled.form`
     }
 `
 
-const ContainerInteragion = styled.div`
+const UserContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,20 +64,20 @@ export default function TopHeader () {
             <StyledForm>
                 <input type="text" />
             </StyledForm>
-            <ContainerInteragion>
+            <UserContainer>
                 <BoxLogin>
                     <FaUserCircle size={30} />
                     <span>Faça <strong><Link href="/auth/login">Login</Link></strong> ou <br/>crie seu <strong><Link href="/auth/register">Cadastro</Link></strong></span>
                 </BoxLogin>
                 <BoxIcons>
                     <Link href="/favoritos">
-                        <FaHeart size={24} />
+                        <FaHeart size={28} />
                     </Link>
                     <Link href="/carrinho">
-                        <FaShoppingCart size={24} />
+                        <FaShoppingCart size={28} />
                     </Link>
                 </BoxIcons>
-            </ContainerInteragion>
+            </UserContainer>
         </ContainerSection>
     )
 } 
