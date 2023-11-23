@@ -22,7 +22,7 @@ export default function Header () {
         <ContainerHeader>
             <TopHeader />
             <NavBar />
- 
+
         </ContainerHeader>
     )
 }
