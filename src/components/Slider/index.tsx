@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { FaAngleLeft } from "react-icons/fa";
 import { useState } from "react";
+import Image from "next/image";
 
 const slides = [
     {
@@ -95,7 +96,7 @@ export default function Slider () {
         <WrapperSlider>
             <ContainerSlider>
                 <ArrowLeft onClick={prevSlider} />
-                <img src={slides[image].url } />
+                <Image src={slides[image].url } alt="Imagem de produtos da loja" />
                 <ArrowRight onClick={nextSlider} />
             </ContainerSlider>
         </WrapperSlider>
