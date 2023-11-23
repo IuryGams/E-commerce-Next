@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { FaAngleLeft } from "react-icons/fa";
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
-const slides = [
+const Slides = [
     {
       url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80',
     },
@@ -25,7 +26,7 @@ const slides = [
 const WrapperSlider = styled.section`
     display: flex;
     width: 100vw;
-    height: 50vh;
+    height: clamp(400px, 50dvh, 50dvh);
     background-color: rgba(0,0,0,0.1);
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `
@@ -82,12 +83,12 @@ export default function Slider () {
 
     const prevSlider = () => {
         const isFirstSlide = image === 0;
-        const newIndex = isFirstSlide ? slides.length - 1 : image - 1;
+        const newIndex = isFirstSlide ? Slides.length - 1 : image - 1;
         setImage(newIndex);
     }
 
     const nextSlider = () => {
-        const isLastSlide = image === slides.length - 1;
+        const isLastSlide = image === Slides.length - 1;
         const newIndex = isLastSlide ? 0 : image + 1;
         setImage(newIndex);
     }
@@ -96,7 +97,9 @@ export default function Slider () {
         <WrapperSlider>
             <ContainerSlider>
                 <ArrowLeft onClick={prevSlider} />
-                <Image src={slides[image].url } alt="Imagem de produtos da loja" />
+                <Link href="/">
+                    <Image fill={true} src={Slides[image].url} alt="Imagem de produtos da loja" />
+                </Link>
                 <ArrowRight onClick={nextSlider} />
             </ContainerSlider>
         </WrapperSlider>
